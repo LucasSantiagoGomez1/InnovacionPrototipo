@@ -12,7 +12,7 @@
   }
 
   .green-letters {
-    color: greenyellow;
+    color: rgb(14, 203, 14);
   }
   
   /* Simulando pantalla de móvil */
@@ -40,6 +40,8 @@
   .section {
     display: none;
     padding: 20px;
+    max-height: 398px; /* Limitar la altura del contenedor */
+    overflow-y: auto;  /* Habilitar el scroll vertical */
   }
   
   .section.active {
@@ -53,6 +55,11 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+
+  .title-image {
+    width: 150px;
+    height: 150px;
   }
   
   /* Botones de navegación */
@@ -112,6 +119,34 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .photo-upload label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none; /* Oculta el botón de archivo original */
+  }
+  
+  .custom-file-upload .upload-text {
+    font-size: 16px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #218838;
   }
   
   .submit-btn:hover {
